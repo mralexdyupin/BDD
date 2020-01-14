@@ -28,21 +28,27 @@ public class DataHelper {
     public static class DateForFirstAmount {
         private String amount;
         private final String from = "5559 0000 0000 0002";
+        private String result;
     }
     public static DateForFirstAmount getDateForFirstAmount() {
         Faker faker = new Faker();
-        String amountDate = String.valueOf((faker.number().numberBetween(0,10000)));
-        return new DateForFirstAmount(amountDate);
+        int number = faker.number().numberBetween(0,10000);
+        String result = number + 10000 + "";
+        String amountDate = String.valueOf((number));
+        return new DateForFirstAmount(amountDate, result);
     }
 
     @Value
     public static class DateForSecondAmount {
         private String amount;
         private final String from = "5559 0000 0000 0001";
+        private String result;
     }
     public static DateForSecondAmount getDateForSecondAmount() {
         Faker faker = new Faker();
-        String amountDate = String.valueOf((faker.number().numberBetween(0,10000)));
-        return new DateForSecondAmount(amountDate);
+        int number = faker.number().numberBetween(0,10000);
+        String result = number + 10000 + "";
+        String amountDate = String.valueOf(number);
+        return new DateForSecondAmount(amountDate,result);
     }
 }
