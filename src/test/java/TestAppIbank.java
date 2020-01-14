@@ -1,7 +1,10 @@
+import com.codeborne.selenide.drivercommands.CloseDriverCommand;
+import com.codeborne.selenide.proxy.SelenideProxyServer;
 import lombok.val;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
 
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 
 public class TestAppIbank {
